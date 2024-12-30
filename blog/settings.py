@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-swf@8&+ts!a&67hyzjcxo+eziw2ttz!696=^)fgj%k^dj(dw-r
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com']
 
 
 # Application definition
@@ -109,18 +109,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-# STATIC_URL = 'static/'
-
-# STATIC_ROOT = BASE_DIR / STATIC_URL
-
-# STATICFILES_DIRS = [
-#     BASE_DIR / 'static_css/'
-# ]
 
 
 
