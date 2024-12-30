@@ -10,8 +10,8 @@ def index(request):
 
 
 def post(request, slug):
-    data = Blog.objects.get(slug=slug)
-    # data= get_object_or_404(Blog, slug=slug)
+    # data = Blog.objects.get(slug=slug)
+    data= get_object_or_404(Blog, slug=slug)
     context = {"post": data}
     return render(request, "blog/post.html", context)
 
