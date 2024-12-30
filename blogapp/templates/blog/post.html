@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %} {% block content %}
+
+  <div class="container">
+    
+    <div
+    class=""
+  >
+    <div class="d-md-flex justify-content-between my-5">
+      <h1 class="">{{post.title}}</h1>
+      <div class="header-left">
+        <p class="">
+          {{post.created_date}} 
+        </p>
+        <p class=""> {{post.read_time}} mins read.</p>
+      </div>
+
+    </div>
+
+    <img src="media/{{post.image}}" alt="My image" 
+ class="rounded img-fluid object-fit-md-contain"  />
+
+    <p class="">{{post.content | safe}}</p>
+  </div>
+
+
+   
+
+  </div>
+
+
+</div> 
+
+{% endblock content %}

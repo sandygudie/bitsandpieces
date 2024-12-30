@@ -1,0 +1,17 @@
+venv
+todo
+*.pyc
+__pycache__
+db.sqlite3
+/env
+*.env
+.vscode
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.*yaml
+static
+staticfiles
+app.yaml
+media
