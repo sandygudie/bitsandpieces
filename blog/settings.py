@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-swf@8&+ts!a&67hyzjcxo+eziw2ttz!696=^)fgj%k^dj(dw-r
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com']
 
@@ -112,9 +113,9 @@ USE_TZ = True
 
 SITE_ID = 1 
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static')]
 
 
 if not DEBUG:

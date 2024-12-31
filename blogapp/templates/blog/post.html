@@ -14,7 +14,11 @@
 
     </div>
 
-    <img src="{{ post.image.url }}" alt="My image" class="rounded img-fluid object-fit-md-contain"  />
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="Image for {{ blog.title }}" style="max-width: 100%; height: auto;">
+    {% else %}
+        <p>No image available for this post.</p>
+    {% endif %}
 
     <p class="">{{post.content | safe}}</p>
   </div>
