@@ -2,9 +2,7 @@
 
   <div class="container">
     
-    <div
-    class=""
-  >
+   <div class="" >
     <div class="d-md-flex justify-content-between my-5">
       <h1 class="">{{post.title}}</h1>
       <div class="header-left">
@@ -16,17 +14,12 @@
 
     </div>
 
-    <img src="media/{{post.image}}" alt="My image" 
- class="rounded img-fluid object-fit-md-contain"  />
+    <img src="{{ post.image.url }}" alt="My image" class="rounded img-fluid object-fit-md-contain"  />
 
     <p class="">{{post.content | safe}}</p>
   </div>
 
-
-   
-
   </div>
-
 
 </div> 
 
