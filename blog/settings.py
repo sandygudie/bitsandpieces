@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 #         conn_max_age=600
 #     )
 # }
+
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
