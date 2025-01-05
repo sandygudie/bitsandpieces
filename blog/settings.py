@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-swf@8&+ts!a&67hyzjcxo+eziw2ttz!696=^)fgj%k^dj(dw-r
 DEBUG = True
 # DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com','goodnews8169.pythonanywhere.com']
 
 
 # Application definition
