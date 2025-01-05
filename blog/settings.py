@@ -75,14 +75,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgresql://blog_user:blog_password@localhost:5432/mydatabase',
+#         conn_max_age=600
+#     )
+# }
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://blog_user:blog_password@localhost:5432/mydatabase',
-        conn_max_age=600
-    )
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
