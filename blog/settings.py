@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-swf@8&+ts!a&67hyzjcxo+eziw2ttz!696=^)fgj%k^dj(dw-r
 DEBUG = True
 # DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com','goodnews8169.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com', 'goodnews8169.pythonanywhere.com']
 
 
 # Application definition
@@ -124,10 +124,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static')]
 
 
-if not DEBUG:
-    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# if not DEBUG:
+#     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     
 
 
