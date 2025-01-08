@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-swf@8&+ts!a&67hyzjcxo+eziw2ttz!696=^)fgj%k^dj(dw-r
 DEBUG = True
 # DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'bitsandpieces.onrender.com', 'goodnews8169.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'goodnews8169.pythonanywhere.com']
 
 
 # Application definition
@@ -75,27 +75,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+# # Replace it with your DATABASES.
 # DATABASES = {
 #     'default': dj_database_url.config(
-#         # Replace this value with your local database's connection string.
-#         default='postgresql://blog_user:blog_password@localhost:5432/mydatabase',
-#         conn_max_age=600
+#         default="sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
 #     )
 # }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# Replace it with your DATABASES.
-DATABASES = {
-    'default': dj_database_url.config(
-        default="sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
-    )
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -126,17 +119,13 @@ USE_TZ = True
 
 SITE_ID = 1 
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static')]
+
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '/static')]
-
-
-# if not DEBUG:
-#     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
-#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
