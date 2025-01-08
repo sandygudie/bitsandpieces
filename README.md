@@ -1,1 +1,1 @@
-Django Application
+BITS AND PIECES 
