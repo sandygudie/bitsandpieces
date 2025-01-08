@@ -1,24 +1,20 @@
 {% extends 'blog/base.html' %} {% block content %}
 
 <div class="container">
-  <h1>Bits and Pieces.</h1>
+  <h3 class="py-3">Bits and Pieces.</h3>
   <div class="row">
     {% for blog in bloglists %}
 
-    <div class="card w-25 mb-3">
+    <div style="width:15%" class="p-2">
       <a class="" href="{% url 'post' blog.slug %}">
         <img
           src="media/{{blog.image}}"
           alt=""
-          class="rounded img-fluid object-fit-md-cover"
+          class="rounded img-fluid object-fit-contain"
         />
-        {% comment %}
-        <div class="card-body d-flex">
-          <h5 class="card-title">{{blog.title}}</h5>
-        </div>
-        {% endcomment %}
       </a>
     </div>
+    {% endfor %} 
   </div>
 </div>
-{% endfor %} {% endblock content %}
+{% endblock content %}

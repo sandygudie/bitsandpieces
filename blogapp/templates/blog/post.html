@@ -4,7 +4,7 @@
     
    <div class="" >
     <div class="d-md-flex justify-content-between my-5">
-      <h1 class="">{{post.title}}</h1>
+      <h2 class="">{{post.title}}</h2>
       <div class="header-left">
         <p class="">
           {{post.created_date}} 
@@ -13,12 +13,11 @@
       </div>
 
     </div>
-
-    {% if post.image %}
-        <img src="{{ post.image.url }}" alt="Image for {{ blog.title }}" style="max-width: 100%; height: auto;">
-    {% else %}
+    <div class="text-center"> 
+       <img src="{{ post.image.url }}" alt="Image for {{ blog.title }}" style="max-width: 20%; height: 40%;">
+         </div>
         <p>No image available for this post.</p>
-    {% endif %}
+
 
     <p class="">{{post.content | safe}}</p>
   </div>
